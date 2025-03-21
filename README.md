@@ -27,7 +27,7 @@ const client = new DashNexOauthClient({
   clientId: 'your-client-id',
   redirectUri: 'https://your-app.com/callback',
   // Optional: baseUrl if different from default
-  baseUrl: 'https://api.dashnex.com'
+  baseUrl: 'https://dashnex.com'
 });
 ```
 
@@ -40,8 +40,8 @@ const client = new DashNexOauthClient({
   redirectUri: 'https://your-app.com/callback'
 });
 
-// Generate authorization URL
-const authUrl = client.getAuthorizationUrl('your-scope');
+// Generate authorization URL, provide scope as optional parameter
+const authUrl = client.getAuthorizationUrl();
 
 // Redirect user to authUrl, receive the code from the URL
 
@@ -88,7 +88,7 @@ type DashNexAuthClientConfig = {
   clientId: string;
   clientSecret?: string;  // Optional
   redirectUri: string;
-  baseUrl?: string;      // Optional, defaults to 'https://api.dashnex.com'
+  baseUrl?: string;      // Optional, defaults to 'https://dashnex.com'
 };
 ```
 

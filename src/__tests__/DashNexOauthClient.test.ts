@@ -9,7 +9,7 @@ describe('DashNexOauthClient', () => {
     clientId: 'test-client-id',
     clientSecret: 'test-client-secret',
     redirectUri: 'http://localhost:3000/callback',
-    baseUrl: 'https://api.dashnex.com'
+    baseUrl: 'https://dashnex.com'
   };
 
   beforeEach(() => {
@@ -72,7 +72,7 @@ describe('DashNexOauthClient', () => {
       const result = await client.exchangeCodeForToken('test-code');
       expect(result).toEqual(mockTokenResponse);
       expect(global.fetch).toHaveBeenCalledWith(
-        'https://api.dashnex.com/oauth/v2/token',
+        'https://dashnex.com/oauth/v2/token',
         expect.objectContaining({
           method: 'POST',
           headers: {
@@ -98,7 +98,7 @@ describe('DashNexOauthClient', () => {
       const result = await clientWithoutSecret.exchangeCodeForToken('test-code', 'test-code-verifier');
       expect(result).toEqual(mockTokenResponse);
       expect(global.fetch).toHaveBeenCalledWith(
-        'https://api.dashnex.com/oauth/v2/token',
+        'https://dashnex.com/oauth/v2/token',
         expect.objectContaining({
           method: 'POST',
           headers: {
@@ -147,7 +147,7 @@ describe('DashNexOauthClient', () => {
       const result = await client.refreshAccessToken('test-refresh-token');
       expect(result).toEqual(mockTokenResponse);
       expect(global.fetch).toHaveBeenCalledWith(
-        'https://api.dashnex.com/oauth/v2/token',
+        'https://dashnex.com/oauth/v2/token',
         expect.objectContaining({
           method: 'POST',
           headers: {

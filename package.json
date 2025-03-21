@@ -1,14 +1,25 @@
 {
   "name": "@dashnex.com/oauth-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
+  "author": "dashnex",
+  "description": "DashNex Oauth Client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashnex/oauth-client.git"
+  },
+  "keywords": [
+    "dashnex",
+    "dashnex.com",
+    "typescript",
+    "oauth",
+    "client"
+  ],
   "scripts": {
     "build": "tsup",
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "buffer": "^6.0.3",
     "sha.js": "^2.4.11"

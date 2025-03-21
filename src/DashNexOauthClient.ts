@@ -26,7 +26,7 @@ export class DashNexOauthClient {
     this.clientId = config.clientId;
     this.clientSecret = config.clientSecret || null;
     this.redirectUri = config.redirectUri;
-    this.baseUrl = config.baseUrl || 'https://api.dashnex.com';
+    this.baseUrl = config.baseUrl || 'https://dashnex.com';
   }
 
   // Generate authorization URL for OAuth flow
